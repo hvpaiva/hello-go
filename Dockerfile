@@ -4,9 +4,6 @@ WORKDIR /usr/src/app
 
 COPY hello.go .
 RUN go env -w GO111MODULE=off
-# && \
-#     go mod init && \
-#     go mod tidy
 
 RUN go build -o hello .
 
