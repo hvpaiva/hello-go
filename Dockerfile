@@ -11,6 +11,6 @@ RUN go build -o hello .
 # Segundo stage
 FROM scratch AS runner
 
-COPY --from=builder /usr/src/app/hello /bin
+COPY --from=builder /usr/src/app/hello .
 
-CMD hello
+CMD ["./hello"]
